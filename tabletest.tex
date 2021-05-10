@@ -1,0 +1,116 @@
+\documentclass{report}
+\usepackage[utf8]{inputenc}
+\usepackage{gensymb}
+\usepackage{color,soul}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{amssymb}
+\usepackage{tabu}
+\usepackage{booktabs}
+\usepackage{moreverb,url}
+\usepackage[colorlinks,bookmarksopen,bookmarksnumbered,citecolor=red,urlcolor=blue]{hyperref}
+\usepackage{textcomp}
+\usepackage{siunitx}
+\usepackage{tabularx}
+\usepackage{amsmath}
+\usepackage[raggedright]{titlesec}
+% stops headings from hyphenating
+\usepackage{geometry} % to change margins
+\usepackage{ragged2e} % provides \RaggedLeft
+\usepackage{pdflscape}
+\usepackage{pgfgantt}
+\usepackage{standalone}
+\usepackage{ragged2e} 
+\usepackage{typearea} 
+\usepackage{parskip}
+\usepackage{vcell}
+\usepackage{tabulary}
+\usepackage{pdfpages}
+\usepackage[margin=10pt,font=small,labelfont=bf,
+labelsep=endash]{caption}
+
+\definecolor{barblue}{RGB}{153,204,254}
+\definecolor{groupblue}{RGB}{51,102,254}
+\definecolor{linkred}{RGB}{165,0,33} 
+
+\geometry{a4paper,textwidth=14cm, textheight=21.3cm, marginratio={1:1,5:7}}
+
+\begin{document}
+
+\newgeometry{margin=1cm}  
+
+\begin{landscape}
+
+    \begin{tabulary}{\linewidth}{LLLLLL}
+        \hline
+        Method      & Temperature range  & Temperature resolution & Spatial resolution & Sensor type & Interrogation method                                        \\
+        \hline
+        Crystal   temperature sensors & up to 1400 & +/-10     & Low                 & Surface mounted                  & Illumination + observation                \\
+        Templugs                      & 650        & 15--25     & Low (single points) & Embedded in substrate            & Analysis of ferromagnetism/hardness/phase \\
+        
+        Glass   ceramic arrays        & 1100       & Not given & Low                 & Surface mounted                  & Observation only                          \\
+        
+        Thermal   paints (TIP)        & Up to 1500 & 10--100    & Moderate            & Surface layer                    & Observation only                          \\
+       
+        Thermal   history sensors     & 150--1400   & +/-5      & High                & Surface layer or embedded in TBC & Illumination + observation                \\   
+        \hline
+    \end{tabulary} 
+
+    \begin{table*}[ht]
+
+        \resizebox{\linewidth}{!}{%
+        \begin{tabular}{@{}llllll@{}}
+        \toprule
+        \textbf{Method} &   \textbf{\begin{tabular}[c]{@{}l@{}}Temperature \\ range (\si{\degreeCelsius})\end{tabular}} &
+          \textbf{\begin{tabular}[c]{@{}l@{}}Temperature \\ resolution (\si{\degreeCelsius})\end{tabular}} &
+          \textbf{\begin{tabular}[c]{@{}l@{}}Spatial \\ resolution\end{tabular}} &
+            \textbf{Sensor type} &
+            \textbf{Interrogation method} \\ \hline
+        Crystal   temperature sensors & up to 1400 & +/-10     & Low                 & Surface mounted                  & Illumination + observation                \\
+        Templugs                      & 650        & 15--25     & Low (single points) & Embedded in substrate            & Analysis of ferromagnetism/hardness/phase \\
+        Glass   ceramic arrays        & 1100       & Not given & Low                 & Surface mounted                  & Observation only                          \\
+        Thermal   paints (TIP)        & Up to 1500 & 10--100    & Moderate            & Surface layer                    & Observation only                          \\
+        Thermal   history sensors     & 150--1400   & +/-5      & High                & Surface layer or embedded in TBC & Illumination + observation                \\ \bottomrule
+        \end{tabular}%
+        }
+        \caption{\label{tab:offline} Summary of offline temperature monitoring methods}
+        \end{table*}
+   
+    
+\end{landscape}
+
+\clearpage
+
+\restoregeometry
+
+ \begin{tabulary}{\linewidth}{L}
+     \hline
+     \textbf{Measurement Hardware}     \\
+     \hline
+     2x Olympus ABWX-2001 Variable angle wedges \\
+     2x Olympus A539S-SM 1 MHz transducers \\
+    Olympus ultrasonic couplant B \\
+    Hewlett Packard/Agilent 33120A Signal generator \\
+    Picoscope 3406DMSO USB Oscilloscope \\
+    Thermadata T-type temperature loggers \\
+    VWR Hot plate \\
+     \hline
+ \end{tabulary} 
+
+ \begin{center}
+    \begin{tabular}{l} 
+        \hline
+        \textbf{Measurement Hardware}     \\
+        \hline
+        2x Olympus ABWX-2001 Variable angle wedges \\
+        2x Olympus A539S-SM 1 MHz transducers \\
+       Olympus ultrasonic couplant B \\
+       Hewlett Packard/Agilent 33120A Signal generator \\
+       Picoscope 3406DMSO USB Oscilloscope \\
+       Thermadata T-type temperature loggers \\
+       VWR Hot plate \\
+        \hline
+    \end{tabular}
+\end{center}
+
+\end{document}
